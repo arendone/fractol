@@ -6,7 +6,7 @@
 #    By: arendon- <arendon-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/20 16:20:05 by arendon-          #+#    #+#              #
-#    Updated: 2022/02/03 16:56:07 by arendon-         ###   ########.fr        #
+#    Updated: 2022/02/07 17:43:18 by arendon-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,11 @@ ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_minimum_sizet.c ft_maximum_sizet.c ft_putnstr_fd.c \
-ft_freearray.c ft_strtrim_ver2.c
-
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+ft_freearray.c ft_strtrim_ver2.c \
+ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_atof.c
 
-all: $(NAME) bonus
+all: $(NAME)
 
 $(NAME):
 	gcc $(CFLAGS) -c $(SRC)
@@ -39,7 +38,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
-
-bonus:
-	gcc $(CFLAGS) -c $(BONUS)
-	ar -crs $(NAME) *.o 
